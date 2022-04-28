@@ -14,17 +14,17 @@ function App() {
   // eslint-disable-next-line
   const debounceHandling = useCallback(
     debounce(() => {
-      setDebounceCounter(debounceCounter + 1);
+      setDebounceCounter((a) => a + 1);
     }, 1000),
-    [debounceCounter]
+    []
   );
 
   // eslint-disable-next-line
   const throttleHandling = useCallback(
     throttle(() => {
-      setThrottleCounter(throttleCounter + 1);
+      setThrottleCounter((a) => a + 1);
     }, 1000),
-    [throttleCounter]
+    []
   );
 
   const handleMouseMove = () => {

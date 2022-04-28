@@ -8,8 +8,7 @@ function App() {
   const [throttleCounter, setThrottleCounter] = useState(0);
 
   const simpleHandling = () => {
-    setDefaultCounter(defaultCounter + 1);
-    console.log(defaultCounter);
+    setDefaultCounter((a) => a + 1);
   };
 
   const debounceHandling = useCallback(

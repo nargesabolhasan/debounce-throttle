@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../App.css";
 import Massage from "./Massage";
+import { Link } from "react-router-dom";
 
 let index = 0;
 
@@ -35,22 +36,11 @@ const Portal = () => {
         <button onClick={handleClick}>show toast massage</button>
         <Massage children={arrayOfMassages} show={showMassage}/>
       </div>
+      <Link to="/">back to home</Link>
     </>
   );
 };
 
 export default Portal;
-
-{
-  /* <div className="second-section">
-        lorem ipsum dolor sit amet, consectetur
-      </div> */
-}
-
-{
-  /* <Modal show={showModal} onclose={() => setShowModal(false)}>
-          Fancy Modal
-        </Modal> */
-}
 
 

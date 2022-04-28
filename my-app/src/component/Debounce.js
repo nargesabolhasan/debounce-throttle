@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import lodash from "lodash";
+import { Link } from "react-router-dom";
 
 function DebounceAndThrottle() {
   const [defaultCounter, setDefaultCounter] = useState(0);
@@ -47,15 +48,18 @@ function DebounceAndThrottle() {
   };
 
   return (
+    <>
     <div
       className="App"
       onMouseMove={handleMouseMove}
-      style={{ width: "100vw", height: "100vh" }}
+      style={{ width: "100vw", height: "80vh" }}
     >
       <h3>Default: {defaultCounter}</h3>
       <h3>Debounce: {debounceCounter}</h3>
       <h3>Throttle: {throttleCounter}</h3>
     </div>
+    <Link to="/">back to home</Link>
+    </>
   );
 }
 

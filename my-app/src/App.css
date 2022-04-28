@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  margin-top:30px;
+}
 
 .App-header {
   background-color: #282c34;

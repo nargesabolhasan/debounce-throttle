@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useState, useCallback } from "react";
+import lodash from "lodash";
 
 function App() {
   const [defaultCounter, setDefaultCounter] = useState(0);
@@ -11,16 +12,30 @@ function App() {
     console.log(defaultCounter);
   };
 
-  // eslint-disable-next-line
   const debounceHandling = useCallback(
+
+    //---with lodash:------
+
+    // lodash.debounce(() => {
+    //   setDebounceCounter((a) => a + 1);
+    // }, 1000),
+
+    //---our debounce function::------
     debounce(() => {
       setDebounceCounter((a) => a + 1);
     }, 1000),
     []
   );
 
-  // eslint-disable-next-line
   const throttleHandling = useCallback(
+
+    //---with lodash:------
+
+    // lodash.throttle(() => {
+    //   setThrottleCounter((a) => a + 1);
+    // }, 1000),
+
+    //---our throttle function:------
     throttle(() => {
       setThrottleCounter((a) => a + 1);
     }, 1000),
